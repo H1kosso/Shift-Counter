@@ -1,5 +1,5 @@
 # Shift-Counter
-Application to count shifts of workers
+Application to count shifts of workers. Interface done in qml
 ![image](https://github.com/H1kosso/Shift-Counter/assets/115038725/adfb112f-3ab3-48ad-a403-4d28b1c62342)
 
 ## Using
