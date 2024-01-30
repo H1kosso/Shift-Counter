@@ -60,7 +60,7 @@ Window {
         objectName: "month"
         height: mainWindow.height - 300
         width: parent.width
-        rows: 16
+        rows: 19
         columns: numberOfDays
         columnSpacing: 0
         rowSpacing: 0
@@ -77,11 +77,14 @@ Window {
 
                 border.color: "black"
                 border.width: 1
-                color: saturdays.includes(index % month.columns) ? "lightblue" : ( sundays.includes(index % month.columns) ? "pink" : (index >= month.columns * 8 && index < month.columns * 9 ? "lightgrey" : "white"))
+                color: saturdays.includes(index % month.columns) ? "lightblue"
+                                                                 : ( sundays.includes(index % month.columns) ? "pink"
+                                                                                                             : (index >= month.columns * 11 && index < month.columns * 12
+                                                                                                                ? "lightgrey" : "white"))
                 TextEdit {
                     anchors.fill: parent
-                    text: index >= month.columns * 8 && index < month.columns * 9 ? "-" : ""
-                    readOnly: index >= month.columns * 8 && index < month.columns * 9
+                    text: index >= month.columns * 11 && index < month.columns * 12 ? "-" : ""
+                    readOnly: index >= month.columns * 11 && index < month.columns * 12
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: 25

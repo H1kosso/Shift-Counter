@@ -26,7 +26,7 @@ void Counter::buttonClicked(int numberOfDays, QList<int> sundays, QList<int> sat
     //Normal days
     for( int i = 0 ; i < numberOfDays  ; i++){
         if(!month.m_sundays.contains(i))
-            for( int j = 0 ; j < 8 ; j++ ){
+            for( int j = 0 ; j < 11 ; j++ ){
                 key = allMonth[j * numberOfDays + i].toStdString();
                 if (key == "" || key == "-") continue;
                 index = doesExist(keys, key);
@@ -43,7 +43,7 @@ void Counter::buttonClicked(int numberOfDays, QList<int> sundays, QList<int> sat
    //Holidays
     for( int i = 0 ; i < numberOfDays  ; i++){
      if(month.m_sundays.contains(i))
-            for( int j = 0 ; j < 8 ; j++ ){
+            for( int j = 0 ; j < 11 ; j++ ){
                 key = allMonth[j * numberOfDays + i].toStdString();
                 if (key == "" || key == "-") continue;
                 index = doesExist(keys, key);
@@ -61,7 +61,7 @@ void Counter::buttonClicked(int numberOfDays, QList<int> sundays, QList<int> sat
     //Normal nights
     for( int i = 0 ; i < numberOfDays  ; i++){
       if(!month.m_saturdays.contains(i) && !month.m_sundays.contains(i))
-            for( int j = 9 ; j < 16 ; j++ ){
+            for( int j = 12 ; j < 19 ; j++ ){
                 key = allMonth[j * numberOfDays + i].toStdString();
                 if (key == "" || key == "-") continue;
                 index = doesExist(keys, key);
@@ -78,7 +78,7 @@ void Counter::buttonClicked(int numberOfDays, QList<int> sundays, QList<int> sat
 //Saturday nights
     for( int i = 0 ; i < numberOfDays  ; i++){
             if(month.m_saturdays.contains(i))
-            for( int j = 9 ; j < 16 ; j++ ){
+            for( int j = 12 ; j < 19 ; j++ ){
                 key = allMonth[j * numberOfDays + i].toStdString();
                 if (key == "" || key == "-") continue;
                 index = doesExist(keys, key);
@@ -96,7 +96,7 @@ void Counter::buttonClicked(int numberOfDays, QList<int> sundays, QList<int> sat
 //Holiday nights
     for( int i = 0 ; i < numberOfDays  ; i++){
     if(month.m_sundays.contains(i))
-            for( int j = 9 ; j < 16 ; j++ ){
+            for( int j = 12 ; j < 19 ; j++ ){
                 key = allMonth[j * numberOfDays + i].toStdString();
                 if (key == "" || key == "-") continue;
                 index = doesExist(keys, key);
